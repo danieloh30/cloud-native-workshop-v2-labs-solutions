@@ -31,7 +31,7 @@ public class InventoryResource {
     @Path("{location}")
     public List<Inventory> getAvailability(@PathParam String location) {
         return Inventory.<Inventory>streamAll()
-        .filter(p -> p.getLocation().equals(location))
+        .filter(p -> p.location.equals(location))
         .collect(Collectors.toList());
     }
 

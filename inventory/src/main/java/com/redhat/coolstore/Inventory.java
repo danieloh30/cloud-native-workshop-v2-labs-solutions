@@ -11,13 +11,13 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 public class Inventory extends PanacheEntity {
 
 	@Column
-    private String location;
+    public String location;
 
 	@Column
-    private int quantity;
+    public int quantity;
 
 	@Column
-    private String link;
+    public String link;
 
     public Inventory() {
 
@@ -29,29 +29,5 @@ public class Inventory extends PanacheEntity {
         this.location = location;
         this.link = link;
     }
-
-	public String getLocation() {
-		return location;
-	}
-
-	public void setLocation(String location) {
-		this.location = location;
-	}
-
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-
-	public String getLink() {
-		return link;
-	}
-
-	public void setLink(String link) {
-		this.link = link;
-	}
 
 }
