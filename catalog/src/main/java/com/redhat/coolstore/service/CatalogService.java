@@ -24,6 +24,7 @@ public class CatalogService {
 
     public Product read(String id) {
         Product product = repository.findById(id);
+        System.out.println("==============================: "+id);
         //TODO: Update the quantity for the product by calling the Inventory service
         JSONArray jsonArray = new JSONArray(inventoryClient.getInventoryStatus(product.getItemId()));
         List<String> quantity = IntStream.range(0, jsonArray.length())
